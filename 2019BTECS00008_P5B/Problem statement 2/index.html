@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calculate Sum Of the Series</title>
+  </head>
+  <body>
+    <header>
+      <h1>Program To Find The Sum Of The Series 1 + 11 + 111 + 1111 + ... n terms.</h1>
+    </header>
+    <hr />
+
+    <article>
+      <section>
+        <h3>Code</h3>
+        <code>
+          <pre>
+            #include <bits/stdc++.h>
+            using namespace std;
+             
+            // Function for finding summation
+            int summation(int n)
+            {
+                int sum = 0, j = 1;
+                for (int i = 1; i <= n; i++) {
+                    sum = sum + j;
+             
+                    // Appending a 1 at the end
+                    j = (j * 10) + 1;
+                }
+             
+                return sum;
+            }
+             
+            // Driver Code
+            int main()
+            {
+                int n = 4;
+                cout << " " <<  summation(n);
+                return 0;
+            }
+           </pre>
+        </code>
+      </section>
+      <hr />
+
+      <section>
+        <h3>Sample input:</h3>
+        <kbd>4</kbd>
+        <h3>Sample output</h3>
+        <samp>1234<samp>
+      </section>
+      <hr />
+
+      <section>
+        <h3>Variable used in the program</h3>
+        <var>n</var> <var>sum</var> <var>i</var> <var>j</var>
+      </section>
+    </article>
+    <hr />
+
+    <footer>
+      <h4>
+        Learn more about algorithm used
+        <a
+          href="https://www.geeksforgeeks.org/find-sum-series-1111111111-upto-n-terms/"
+          >here</a
+        >!
+      </h4>
+    </footer>
+  </body>
+</html>
